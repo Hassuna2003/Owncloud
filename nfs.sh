@@ -32,13 +32,13 @@ cat <<EOF > /var/nfs/general/owncloud/config/autoconfig.php
 <?php
 \$AUTOCONFIG = array(
   "dbtype" => "mysql",
-  "dbname" => "owncloud_db",
-  "dbuser" => "owncloud_user",
-  "dbpassword" => "2024",
-  "dbhost" => "192.168.20.40",
+  "dbname" => "owncloud",
+  "dbuser" => "owncloud",
+  "dbpassword" => "1234",
+  "dbhost" => "192.168.5.4",
   "directory" => "/var/nfs/general/owncloud/data",
   "adminlogin" => "admin",
-  "adminpass" => "2024"
+  "adminpass" => "1234"
 );
 EOF
 
