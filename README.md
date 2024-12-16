@@ -15,6 +15,7 @@
     - [4.2 Configuración del Servidor NFS](#42-configuración-del-servidor-nfs)
     - [4.3 Configuración de los Servidores Backend con NGINX y Clientes NFS](#43-configuración-de-los-servidores-backend-con-nginx-y-clientes-nfs)
     - [4.4 Configuración del Servidor de Base de Datos](#44-configuración-del-servidor-de-base-de-datos)
+5. [Mensaje al PROFESOR](#mensaje-al-profesor)
 ---
 
 ## 2. Introducción
@@ -269,6 +270,7 @@ EOF
 # Elimino la ruta predeterminada
 sudo ip route del default
 ```
+## 5. Mensaje al PROFESOR
 
-
+EL OWNCLOUD ME ABRE UNA VEZ, Y CUANDO LE DOY A INSTALAR, ME SACA. HE HECHO YA 4 VAGRANTFILES INTENTANDO SOLUCIONARLO Y NADA... 
 
