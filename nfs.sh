@@ -35,7 +35,7 @@ cat <<EOF > /var/www/html/owncloud/config/autoconfig.php
   "dbname" => "owncloud",
   "dbuser" => "owncloud",
   "dbpassword" => "1234",
-  "dbhost" => "192.168.5.4",
+  "dbhost" => "192.168.20.40",
   "directory" => "/var/www/html/owncloud/data",
   "adminlogin" => "admin",
   "adminpass" => "1234"
