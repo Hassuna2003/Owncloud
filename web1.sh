@@ -5,20 +5,20 @@ sudo apt-get update -y
 sudo apt-get install -y nginx nfs-common php7.4 php7.4-fpm php7.4-mysql php7.4-gd php7.4-xml php7.4-mbstring php7.4-curl php7.4-zip php7.4-intl php7.4-ldap mariadb-client
 
 # Creo un directorio local donde se montará la carpeta compartida por NFS
-sudo mkdir -p /var/nfs/general
+sudo mkdir -p /var/www/html
 
 # Monta la carpeta compartida desde el servidor NFS en la ruta local
-sudo mount -t nfs 192.168.10.20:/var/nfs/general /var/nfs/general
+sudo mount -t nfs 192.168.10.20:/var/www/html /var/www/html
 
 # Agrego la configuración de montaje NFS al /etc/fstab para que sea persistente después de reiniciar
-sudo echo "192.168.10.20:/var/nfs/general    /var/nfs/general   nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0" | sudo tee -a /etc/fstab
+sudo echo "192.168.10.20:/var/www/html    /var/www/html   nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0" | sudo tee -a /etc/fstab
 
 # Configuro NGINX para servir los archivos de OwnCloud desde la carpeta compartida
 cat <<EOF > /etc/nginx/sites-available/default
 server {
     listen 80;  # NGINX escuchará en el puerto 80
 
-    root /var/nfs/general/owncloud;
+    root /var/www/html/owncloud;
     index index.php index.html index.htm;
 
     location / {
